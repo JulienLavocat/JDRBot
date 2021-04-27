@@ -1,0 +1,22 @@
+{
+  "name": "jdr-bot",
+  "version": "0.0.0",
+  "description": "JDR Bot",
+  "main": "dist/index.js",
+  "author": "Julien Lavocat",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.5.0",
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.3.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^4.5.0"
+  }
+}
