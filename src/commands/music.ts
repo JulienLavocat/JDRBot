@@ -1,10 +1,9 @@
 import { Message } from "discord.js";
 import MusicPlayer from "../musicPlayer";
+import { musicPlayer as player } from "../bot";
 
 const INVALID_USAGE =
 	"Commande invalide, utilisez: `!m [stop | skip | add | pause | list | start]`";
-
-const player = new MusicPlayer();
 
 const handlers: { [cmd: string]: (msg: Message, args: string[]) => void } = {
 	stop: (msg, args) => {
@@ -47,6 +46,9 @@ const handlers: { [cmd: string]: (msg: Message, args: string[]) => void } = {
 	},
 	leave: (msg, args) => {
 		player.leave();
+	},
+	play: (msg, args) => {
+		player.play();
 	},
 };
 
