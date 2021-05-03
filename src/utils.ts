@@ -24,7 +24,6 @@ const NEAR_FAIL_GIF = [
 ];
 
 export const getRollDiceMessage = (random: number, value: number) => {
-	random = 10;
 	if (value === 100) {
 		if (random <= 5)
 			return `${random} Succès critique ! ${SUCCESS_EMOJI}\n${getSuccessGif()}`;
