@@ -13,6 +13,11 @@ export default function (msg: Message) {
 		throws = isNaN(amount) ? 1 : Math.max(amount, 1);
 	}
 
+	if (throws > 10)
+		return msg.reply(
+			" La valeur du dé doit être un nombre entre 1 et 10 !"
+		);
+
 	for (let i = 0; i < throws; i++) {
 		msg.author.send(
 			utils.getRollDiceMessage(utils.randomRange(1, value), value)
