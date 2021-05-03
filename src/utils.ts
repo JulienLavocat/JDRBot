@@ -10,12 +10,17 @@ const SUCCESS_GIFS = [
 	"https://tenor.com/view/yes-baby-goal-funny-face-gif-13347383",
 ];
 
+const FAIL_GIF = [
+	"https://tenor.com/view/gandalf-old-man-naked-take-robe-off-funny-gif-17224126",
+];
+
 export const getRollDiceMessage = (random: number, value: number) => {
 	if (value === 100) {
 		if (random <= 5)
 			return `${random} Succès critique ! ${SUCCESS_EMOJI}\n${getSuccessGif()}`;
 
-		if (random >= 95) return `${random} Échec critique ! ${FAIL_EMOJI}`;
+		if (random >= 95)
+			return `${random} Échec critique ! ${FAIL_EMOJI}\n${getFailGif()}`;
 
 		if (random >= 90 && random < 95)
 			return `${random} C'est pas un échec critique ! C'est pas un échec critique !`;
@@ -26,4 +31,8 @@ export const getRollDiceMessage = (random: number, value: number) => {
 
 export function getSuccessGif() {
 	return SUCCESS_GIFS[Math.floor(Math.random() * SUCCESS_GIFS.length)];
+}
+
+export function getFailGif() {
+	return FAIL_GIF[Math.floor(Math.random() * FAIL_GIF.length)];
 }

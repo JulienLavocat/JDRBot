@@ -93,5 +93,12 @@ export default class MusicPlayer {
 			if (this.musicStream) this.connection?.play(this.musicStream);
 			this.musicStream?.resume();
 		});
+
+		// return new Promise(resolve => {
+		// 	this.dispatcher = connection
+		// 	  .play(name, { volume: this.config.volume })
+		// 	  .on('finish', resolve)
+		// 	  .on('close', resolve);
+		//   });
 	}
 }
