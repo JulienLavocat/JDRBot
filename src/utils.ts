@@ -31,6 +31,9 @@ export const getRollDiceMessage = (random: number, value: number) => {
 		if (random <= 10 && random > 5)
 			return `${random}\n${getNearSuccessGif()}`;
 
+		if (random === 69)
+			return `${random}\nhttps://tenor.com/view/sausage-fest-hot-dog-gif-14785205`;
+
 		if (random >= 95)
 			return `${random} Échec critique ! ${FAIL_EMOJI}\n${getFailGif()}`;
 
