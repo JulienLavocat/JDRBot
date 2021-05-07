@@ -7,6 +7,7 @@ import hiddenDice from "./commands/hiddenDice";
 import music from "./commands/music";
 import soundboard from "./commands/soundboard";
 import MusicPlayer from "./musicPlayer";
+import maps from "./commands/maps";
 
 const PREFIX = process.env.PREFIX || "!";
 const client = new Client();
@@ -17,6 +18,7 @@ client.on("message", (msg) => {
 
 	const cmd = msg.content.slice(1);
 
+	if (cmd.startsWith("map")) return maps(msg);
 	if (cmd.startsWith("dc")) return hiddenDice(msg);
 	if (cmd.startsWith("d")) return dice(msg);
 	if (cmd.startsWith("m")) return music(msg);
